@@ -1,7 +1,12 @@
 import { loadState, saveState, clearState, downloadJSON, readJSON } from './storage.js';
 import { defaultAttractions, parseGeoJSON, filterAttractions } from './attractions.js?v=5';
 import { days, blankPlan, normalizePlan, assignedDay, assign, setTime, timeToMinutes, addTravel, setTravelLabel } from './itinerary.js';
-import { initMap, renderMarkers, focusPlace, setPickMode } from './map.js';
+import {
+  initMap,
+  renderMarkers,
+  focusPlace,
+  setPickMode
+} from "./map.js?v=2";
 import { firebaseConfig, sharedSync } from './firebase-config.js?v=6';
 import { initSharedSync, saveSharedState } from './sync.js?v=6';
 
