@@ -7,6 +7,7 @@
   <title>Japan, day by day</title>
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet"href="https://cdn.maptiler.com/maptiler-sdk-js/v4.2.1/maptiler-sdk.css">
   <link rel="stylesheet" href="css/styles.css?v=7">
 </head>
 <body>
@@ -59,9 +60,31 @@
           <span>Your itinerary and attraction list still work. Check your connection, then reload to try the map again.</span>
         </div>
         <div class="map-tools">
+          <span>Basemap</span>
+          <label>
+            <input type="radio" name="basemap" value="streets" checked>
+            Streets
+          </label>
+          <label>
+            <input type="radio" name="basemap" value="satellite">
+            Satellite
+          </label>
+        
           <span>Map shows</span>
-          <label><input id="show-all" type="radio" name="map-scope" value="all" checked> all places</label>
-          <label><input type="radio" name="map-scope" value="day"> selected day</label>
+          <label>
+            <input
+              id="show-all"
+              type="radio"
+              name="map-scope"
+              value="all"
+              checked
+            >
+            all places
+          </label>
+          <label>
+            <input type="radio" name="map-scope" value="day">
+            selected day
+          </label>
         </div>
         <div id="toast" class="toast" role="status" aria-live="polite"></div>
       </section>
@@ -100,6 +123,9 @@
   <footer><span id="sync-status" class="sync-status" data-state="local">Saved in this browser</span><button id="reset-plan" class="text-button danger" type="button">Reset everything</button></footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="https://cdn.maptiler.com/maptiler-sdk-js/v4.2.1/maptiler-sdk.umd.min.js" defer></script>
+
+  <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.1.0/leaflet-maptilersdk.umd.min.js" defer></script>
   <script type="module" src="js/app.js?v=9"></script>
 </body>
 </html>
