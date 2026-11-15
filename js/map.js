@@ -1,3 +1,4 @@
+import { mapTilerConfig } from "./maptiler-config.js?v=1";
 let map, layer;
 const markers = new Map();
 const colors = { Tokyo:'#c44435', Kyoto:'#244b3d', Osaka:'#d08d25', Hakone:'#496f91', Nara:'#78588e', Hotel:'#7a4f9d', Other:'#59615b' };
