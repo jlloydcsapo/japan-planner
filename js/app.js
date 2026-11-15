@@ -53,7 +53,7 @@ function placeCard(p) {
 }
 
 function renderCalendar(stops){
-  const hours=Array.from({length:24},(_,i)=>i);
+  const hours=Array.from({length:25},(_,i)=>i);
   const sorted=[...stops].sort((a,b)=>timeToMinutes(a.start)-timeToMinutes(b.start));
   return `<div class="calendar"><div class="time-rail">${hours.map(hour=>`<span style="top:${hour*60}px">${String(hour).padStart(2,'0')}:00</span>`).join('')}</div><div class="calendar-grid">${hours.map(hour=>`<i style="top:${hour*60}px"></i>`).join('')}${sorted.map(stop=>stopCard(stop)).join('')}</div></div>`;
 }
