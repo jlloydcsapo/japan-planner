@@ -4,21 +4,87 @@ const markers = new Map();
 const colors = { Tokyo:'#c44435', Kyoto:'#244b3d', Osaka:'#d08d25', Hakone:'#496f91', Nara:'#78588e', Hotel:'#7a4f9d', Other:'#59615b' };
 
 export function initMap({ onSelect, onMapClick, onError }) {
-  if (!window.L) { onError('Leaflet unavailable'); return false; }
+  if (!window.L) {
+    onError("Leaflet unavailable");
+    return false;
+  }
+
   try {
-    map = L.map('map', { zoomControl:true }).setView([35.38, 136.7], 6);
-    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom:19,
-      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    });
-    let tileFailures = 0;
-    tiles.on('tileerror', () => { if (++tileFailures === 3) onError('Map tiles unavailable'); });
-    tiles.addTo(map);
+    map = L.map("map", {
+      zoomControl: true
+    }).setView([35.38, 136.7], 6);
+
+    const hasMapTiler =
+      mapTilerConfig.apiKey &&
+      L.maptiler?.maptilerLayer;
+
+    if (hasMapTiler) {
+      const basemap = L.maptiler.maptilerLayer({
+        apiKey: mapTilerConfig.apiKey,
+        style: L.maptiler.MapStyle.STREETS,
+        language: L.maptiler.Language.ENGLISH
+      }).addTo(map);
+
+      document
+        .querySelectorAll('[name="basemap"]')
+        .forEach(control => {
+          control.addEventListener("change", event => {
+            const style =
+              event.target.value === "satellite"
+                ? L.maptiler.MapStyle.HYBRID
+                : L.maptiler.MapStyle.STREETS;
+
+            basemap.setStyle(style);
+            basemap.setLanguage(
+              L.maptiler.Language.ENGLISH
+            );
+          });
+        });
+    } else {
+      const tiles = L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+          maxZoom: 19,
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }
+      );
+
+      let tileFailures = 0;
+
+      tiles.on("tileerror", () => {
+        if (++tileFailures === 3) {
+          onError("Map tiles unavailable");
+        }
+      });
+
+      tiles.addTo(map);
+
+      document
+        .querySelectorAll('[name="basemap"]')
+        .forEach(control => {
+          control.disabled = true;
+        });
+    }
+
     layer = L.layerGroup().addTo(map);
-    map.on('click', e => { onSelect?.(null); onMapClick?.({lat:e.latlng.lat,lng:e.latlng.lng}); });
+
+    map.on("click", event => {
+      onSelect?.(null);
+
+      onMapClick?.({
+        lat: event.latlng.lat,
+        lng: event.latlng.lng
+      });
+    });
+
     setTimeout(() => map.invalidateSize(), 0);
+
     return true;
-  } catch (error) { onError(error.message); return false; }
+  } catch (error) {
+    onError(error.message);
+    return false;
+  }
 }
 
 export function setPickMode(active) { map?.getContainer().classList.toggle('picking-place',active); }
