@@ -33,7 +33,7 @@ For a quicker single-place workflow, choose “Add from map,” click the locati
 
 ## Travel and hotels
 
-Select a day and use “Add travel” as often as needed. Attractions and travel items have editable start/end times and appear on a calendar timeline, with longer events rendered as taller blocks. Existing duration-based backups are migrated into sequential times automatically. Add hotels in the Hotels section with a stay day, latitude, and longitude; hotel cards are listed by day and focus their purple marker when selected.
+Select a day and use “Add travel” as often as needed. Attractions and travel items have editable start/end times and appear on a calendar timeline, with longer events rendered as taller blocks. Existing duration-based backups are migrated into sequential times automatically. Add hotels in the Hotels section with inclusive first/last stay days, latitude, and longitude. Each hotel appears at the top of every applicable day's itinerary and focuses its map marker when selected. Older single-day hotel backups are migrated automatically.
 
 ## Privacy and storage
 

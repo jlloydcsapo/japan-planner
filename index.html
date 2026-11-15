@@ -7,7 +7,7 @@
   <title>Japan, day by day</title>
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 <body>
   <header class="masthead">
@@ -27,7 +27,8 @@
       <div class="hotels-heading"><div><p class="kicker">Overnight stays</p><h2 id="hotels-heading">Hotels</h2></div><span id="hotel-count" class="count">0 hotels</span></div>
       <form id="hotel-form" class="hotel-form">
         <label><span>Hotel name</span><input id="hotel-name" type="text" maxlength="100" placeholder="e.g. Hotel Gracery Shinjuku" required></label>
-        <label><span>Stay day</span><select id="hotel-day" required></select></label>
+        <label><span>First day</span><select id="hotel-start-day" required></select></label>
+        <label><span>Last day</span><select id="hotel-end-day" required></select></label>
         <label><span>Latitude</span><input id="hotel-lat" type="number" step="any" min="-90" max="90" placeholder="35.69" required></label>
         <label><span>Longitude</span><input id="hotel-lng" type="number" step="any" min="-180" max="180" placeholder="139.70" required></label>
         <button class="button" type="submit">Add hotel</button>
@@ -71,6 +72,7 @@
           <button id="clear-day" class="text-button" type="button">Clear day</button>
         </div>
         <div id="day-tabs" class="day-tabs" aria-label="Choose itinerary day"></div>
+        <div id="day-hotels" class="day-hotels" aria-live="polite"></div>
         <form id="travel-form" class="travel-form">
           <label><span class="sr-only">Travel details</span><input id="travel-label" type="text" maxlength="80" placeholder="Travel details, e.g. Tokyo → Kyoto" required></label>
           <label><span class="sr-only">Travel start time</span><input id="travel-start" type="time" value="09:00" aria-label="Travel start time" required></label>
@@ -98,6 +100,6 @@
   <footer><span id="sync-status" class="sync-status" data-state="local">Saved in this browser</span><button id="reset-plan" class="text-button danger" type="button">Reset everything</button></footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
-  <script type="module" src="js/app.js?v=6"></script>
+  <script type="module" src="js/app.js?v=7"></script>
 </body>
 </html>
