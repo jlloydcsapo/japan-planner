@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f1e8">
+  <title>Japan, day by day</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body>
+  <header class="masthead">
+    <div>
+      <p class="eyebrow">13-day itinerary planner</p>
+      <h1>Japan, day by day</h1>
+      <p class="lede">Shape each day around the places you actually want to see.</p>
+    </div>
+    <div class="header-actions">
+      <button id="export-json" class="button secondary" type="button">Back up plan</button>
+      <label class="button secondary file-button">Restore plan<input id="import-json" type="file" accept="application/json,.json"></label>
+    </div>
+  </header>
+
+  <main>
+    <section class="hotels-section" aria-labelledby="hotels-heading">
+      <div class="hotels-heading"><div><p class="kicker">Overnight stays</p><h2 id="hotels-heading">Hotels</h2></div><span id="hotel-count" class="count">0 hotels</span></div>
+      <form id="hotel-form" class="hotel-form">
+        <label><span>Hotel name</span><input id="hotel-name" type="text" maxlength="100" placeholder="e.g. Hotel Gracery Shinjuku" required></label>
+        <label><span>Stay day</span><select id="hotel-day" required></select></label>
+        <label><span>Latitude</span><input id="hotel-lat" type="number" step="any" min="-90" max="90" placeholder="35.69" required></label>
+        <label><span>Longitude</span><input id="hotel-lng" type="number" step="any" min="-180" max="180" placeholder="139.70" required></label>
+        <button class="button" type="submit">Add hotel</button>
+      </form>
+      <p class="coordinate-help">Coordinates place the hotel on the map. You can copy them from any map service.</p>
+      <div id="hotel-list" class="hotel-list"></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel attractions-panel">
+        <div class="panel-heading">
+          <div><p class="kicker">Discover</p><h2>Attractions</h2></div>
+          <span id="attraction-count" class="count"></span>
+        </div>
+        <label class="search"><span class="sr-only">Search attractions</span><input id="search" type="search" placeholder="Search place or city…"></label>
+        <div id="city-filters" class="chips" aria-label="Filter attractions by city"></div>
+        <div id="attraction-list" class="attraction-list"></div>
+        <div class="import-box">
+          <div><strong>Add your own places</strong><small>Click the map or import Point GeoJSON</small></div>
+          <div class="add-place-actions"><button id="add-from-map" class="button compact" type="button">Add from map</button><label class="button compact secondary file-button">Import GeoJSON<input id="geojson-input" type="file" accept="application/geo+json,application/json,.geojson,.json"></label></div>
+        </div>
+      </aside>
+
+      <section class="map-panel" aria-label="Map">
+        <div id="map" role="application" aria-label="Map of Japan attractions"></div>
+        <div id="map-fallback" class="map-fallback" hidden>
+          <strong>The interactive map couldn’t load.</strong>
+          <span>Your itinerary and attraction list still work. Check your connection, then reload to try the map again.</span>
+        </div>
+        <div class="map-tools">
+          <span>Map shows</span>
+          <label><input id="show-all" type="radio" name="map-scope" value="all" checked> all places</label>
+          <label><input type="radio" name="map-scope" value="day"> selected day</label>
+        </div>
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      </section>
+
+      <aside class="panel itinerary-panel">
+        <div class="panel-heading">
+          <div><p class="kicker">Your route</p><h2>Itinerary</h2></div>
+          <button id="clear-day" class="text-button" type="button">Clear day</button>
+        </div>
+        <div id="day-tabs" class="day-tabs" aria-label="Choose itinerary day"></div>
+        <form id="travel-form" class="travel-form">
+          <label><span class="sr-only">Travel details</span><input id="travel-label" type="text" maxlength="80" placeholder="Travel details, e.g. Tokyo → Kyoto" required></label>
+          <label><span class="sr-only">Travel start time</span><input id="travel-start" type="time" value="09:00" aria-label="Travel start time" required></label>
+          <label><span class="sr-only">Travel end time</span><input id="travel-end" type="time" value="10:00" aria-label="Travel end time" required></label>
+          <button class="button compact" type="submit">Add travel</button>
+        </form>
+        <div id="day-stops" class="day-stops"></div>
+        <div id="empty-day" class="empty-state">
+          <span>＋</span><strong>No stops yet</strong><p>Choose a day for an attraction, then add it here.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <dialog id="place-dialog" class="place-dialog">
+    <form id="place-form">
+      <div class="dialog-heading"><div><p class="kicker">New map point</p><h2>Add attraction</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Close">×</button></div>
+      <label><span>Name</span><input id="place-name" type="text" maxlength="100" placeholder="Attraction name" required></label>
+      <div class="dialog-row"><label><span>City</span><input id="place-city" type="text" list="city-options" maxlength="60" placeholder="Tokyo" required><datalist id="city-options"></datalist></label><label><span>Category</span><input id="place-category" type="text" maxlength="60" placeholder="Museum" required></label></div>
+      <div class="coordinates"><span id="picked-coordinates"></span><input id="place-lat" type="hidden"><input id="place-lng" type="hidden"></div>
+      <div class="dialog-actions"><button class="button secondary" type="button" data-close-dialog>Cancel</button><button class="button" type="submit">Save attraction</button></div>
+    </form>
+  </dialog>
+
+  <footer><span id="sync-status" class="sync-status" data-state="local">Saved in this browser</span><button id="reset-plan" class="text-button danger" type="button">Reset everything</button></footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script type="module" src="js/app.js?v=6"></script>
+</body>
+</html>

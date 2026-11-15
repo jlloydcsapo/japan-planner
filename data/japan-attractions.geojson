@@ -1,0 +1,635 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "tokyo-disneysea",
+      "properties": {
+        "id": "tokyo-disneysea",
+        "name": "Tokyo DisneySea",
+        "city": "Tokyo",
+        "category": "Theme park",
+        "url": "https://www.tokyodisneyresort.jp/en/ticket/index.html?park=tds",
+        "notes": "Maihama, Urayasu, Chiba"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.88806,
+          35.62667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tokyo-disneyland",
+      "properties": {
+        "id": "tokyo-disneyland",
+        "name": "Tokyo Disneyland",
+        "city": "Tokyo",
+        "category": "Theme park",
+        "url": "https://www.tokyodisneyresort.jp/en/ticket/index.html",
+        "notes": "Maihama, Urayasu, Chiba"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.881417,
+          35.632659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tokyo-imperial-palace",
+      "properties": {
+        "id": "tokyo-imperial-palace",
+        "name": "Tokyo Imperial Palace",
+        "city": "Tokyo",
+        "category": "Landmark",
+        "url": "https://sankan.kunaicho.go.jp/english/guide/koukyo.html",
+        "notes": "Chiyoda. Pin represents the palace grounds."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7527,
+          35.6824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "senso-ji-temple",
+      "properties": {
+        "id": "senso-ji-temple",
+        "name": "Sensō-ji Temple",
+        "city": "Tokyo",
+        "category": "Temple",
+        "url": "https://www.senso-ji.jp/english/",
+        "notes": "Main hall in Asakusa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.79675,
+          35.71472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "shibuya-crossing",
+      "properties": {
+        "id": "shibuya-crossing",
+        "name": "Shibuya Crossing",
+        "city": "Tokyo",
+        "category": "Landmark",
+        "url": "https://www.japan.travel/en/spot/2177/",
+        "notes": "Shibuya Scramble Crossing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.70055,
+          35.65948
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asakusa",
+      "properties": {
+        "id": "asakusa",
+        "name": "Asakusa",
+        "city": "Tokyo",
+        "category": "Neighborhood",
+        "url": "https://www.japan-guide.com/e/e3004.html",
+        "notes": "Kaminarimon Gate is the neighborhood anchor."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.79636,
+          35.7111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "harajuku",
+      "properties": {
+        "id": "harajuku",
+        "name": "Harajuku",
+        "city": "Tokyo",
+        "category": "Neighborhood",
+        "url": "https://www.japan-guide.com/e/e3006.html",
+        "notes": "Takeshita Street entrance by Harajuku Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.70338,
+          35.67117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nijubashi-bridge",
+      "properties": {
+        "id": "nijubashi-bridge",
+        "name": "Nijūbashi Bridge",
+        "city": "Tokyo",
+        "category": "Landmark",
+        "url": "https://visit-chiyoda.tokyo/app/en/spot/detail/242",
+        "notes": "The inner bridge behind the Main Gate Stone Bridge. View from the public plaza."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.75333,
+          35.68
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "akihabara",
+      "properties": {
+        "id": "akihabara",
+        "name": "Akihabara",
+        "city": "Tokyo",
+        "category": "Neighborhood",
+        "url": "https://www.gotokyo.org/en/destinations/central-tokyo/akihabara/index.html",
+        "notes": "Akihabara Station Electric Town side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.77194,
+          35.69825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tokyo-national-museum",
+      "properties": {
+        "id": "tokyo-national-museum",
+        "name": "Tokyo National Museum",
+        "city": "Tokyo",
+        "category": "Museum",
+        "url": "https://www.tnm.jp/?lang=en",
+        "notes": "Ueno Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.77652,
+          35.71884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ueno-park",
+      "properties": {
+        "id": "ueno-park",
+        "name": "Ueno Park",
+        "city": "Tokyo",
+        "category": "Park",
+        "url": "https://www.japan-guide.com/e/e3019.html",
+        "notes": "Representative park point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.77343,
+          35.71475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ginza",
+      "properties": {
+        "id": "ginza",
+        "name": "Ginza",
+        "city": "Tokyo",
+        "category": "Neighborhood",
+        "url": "https://www.gotokyo.org/en/destinations/central-tokyo/ginza/index.html",
+        "notes": "Ginza 4-chome intersection"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.76517,
+          35.67171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "art-aquarium-museum-ginza",
+      "properties": {
+        "id": "art-aquarium-museum-ginza",
+        "name": "Art Aquarium Museum GINZA",
+        "city": "Tokyo",
+        "category": "Museum",
+        "url": "https://ticket.artaquarium.jp/en/",
+        "notes": "Ginza Mitsukoshi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.76573,
+          35.67136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "aries-shibuya-station-east-exit",
+      "properties": {
+        "id": "aries-shibuya-station-east-exit",
+        "name": "Aries Shibuya Station East Exit",
+        "city": "Tokyo",
+        "category": "Salon",
+        "url": "https://beauty.hotpepper.jp/slnH000580652/map/",
+        "notes": "Approximate building pin. Sato Estate Building Main Building, 2F, 3-18-5 Shibuya."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7025,
+          35.65772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ghibli-museum",
+      "properties": {
+        "id": "ghibli-museum",
+        "name": "Ghibli Museum",
+        "city": "Tokyo",
+        "category": "Museum",
+        "url": "https://www.ghibli-museum.jp/en/tickets/",
+        "notes": "Mitaka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.57043,
+          35.69623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "teamlab-planets-tokyo",
+      "properties": {
+        "id": "teamlab-planets-tokyo",
+        "name": "teamLab Planets TOKYO",
+        "city": "Tokyo",
+        "category": "Museum",
+        "url": "https://www.teamlab.art/e/planets/",
+        "notes": "6-1-16 Toyosu, Koto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.78973,
+          35.64938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "zen-chopstick-making-workshop",
+      "properties": {
+        "id": "zen-chopstick-making-workshop",
+        "name": "ZEN Chopstick-Making Workshop",
+        "city": "Tokyo",
+        "category": "Workshop",
+        "url": "https://www.viator.com/tours/Tokyo/Tokyo-Shinjuku-Chopsticks-Making-Experience-Workshop/d334-465886P35",
+        "notes": "Shinjuku West Square Building, 10F, 7-4-5 Nishi-Shinjuku."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6984167,
+          35.6959851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kinkaku-ji-golden-pavilion",
+      "properties": {
+        "id": "kinkaku-ji-golden-pavilion",
+        "name": "Kinkaku-ji (Golden Pavilion)",
+        "city": "Kyoto",
+        "category": "Temple",
+        "url": "https://www.shokoku-ji.jp/en/kinkakuji/gallery/",
+        "notes": "Pin at the Golden Pavilion"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7293639,
+          35.0394028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gion",
+      "properties": {
+        "id": "gion",
+        "name": "Gion",
+        "city": "Kyoto",
+        "category": "Neighborhood",
+        "url": "https://www.japan-guide.com/e/e3902.html",
+        "notes": "Hanamikoji Street area"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.775051,
+          35.003496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "arashiyama-bamboo-grove",
+      "properties": {
+        "id": "arashiyama-bamboo-grove",
+        "name": "Arashiyama Bamboo Grove",
+        "city": "Kyoto",
+        "category": "Walk",
+        "url": "https://www.japan.travel/en/spot/1141/",
+        "notes": "East side of the grove"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.674625,
+          35.017923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ryoan-ji-temple",
+      "properties": {
+        "id": "ryoan-ji-temple",
+        "name": "Ryōan-ji Temple",
+        "city": "Kyoto",
+        "category": "Temple",
+        "url": "https://www.japan-guide.com/e/e3909.html",
+        "notes": "Temple garden"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.71869517,
+          35.0333862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kodai-ji-temple",
+      "properties": {
+        "id": "kodai-ji-temple",
+        "name": "Kōdai-ji Temple",
+        "city": "Kyoto",
+        "category": "Temple",
+        "url": "https://www.japan-guide.com/e/e3927.html",
+        "notes": "Higashiyama"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7811139,
+          35.0007611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "yasaka-pagoda-hokan-ji",
+      "properties": {
+        "id": "yasaka-pagoda-hokan-ji",
+        "name": "Yasaka Pagoda (Hōkan-ji)",
+        "city": "Kyoto",
+        "category": "Temple",
+        "url": "https://kyoto.travel/en/destinations/hokanji-templeyasaka-pagoda/",
+        "notes": "Higashiyama"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.77925,
+          34.99855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "yasaka-shrine",
+      "properties": {
+        "id": "yasaka-shrine",
+        "name": "Yasaka Shrine",
+        "city": "Kyoto",
+        "category": "Shrine",
+        "url": "https://www.japan-guide.com/e/e3903.html",
+        "notes": "East end of Shijō Street"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.77861,
+          35.00361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fushimi-inari-taisha",
+      "properties": {
+        "id": "fushimi-inari-taisha",
+        "name": "Fushimi Inari Taisha",
+        "city": "Kyoto",
+        "category": "Shrine",
+        "url": "https://www.japan-guide.com/e/e3915.html",
+        "notes": "Lower shrine area"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.77465,
+          34.96704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kiyomizu-dera",
+      "properties": {
+        "id": "kiyomizu-dera",
+        "name": "Kiyomizu-dera",
+        "city": "Kyoto",
+        "category": "Temple",
+        "url": "https://www.kiyomizudera.or.jp/en/",
+        "notes": "Main temple complex"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.785,
+          34.995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "arashiyama-scenic-train-hozugawa-river-cruise-tour",
+      "properties": {
+        "id": "arashiyama-scenic-train-hozugawa-river-cruise-tour",
+        "name": "Arashiyama Scenic Train & Hozugawa River Cruise Tour",
+        "city": "Osaka",
+        "category": "Tour",
+        "url": "https://www.viator.com/tours/Osaka/Kyoto-Day-Tour-Arashiyama-Scenic-Train-and-Hozugawa-River-Cruise/d333-5489818P66",
+        "notes": "All-day tour. Approximate Osaka meeting-point pin at Nippombashi Station Exit 2, 1-3-11 Nipponbashi. Kyoto pickup also offered at the Kyoto Station Hachijoguchi Bus Loading Area.",
+        "allDay": true,
+        "alternatePickup": "Kyoto Station Hachijoguchi Bus Loading Area, Higashikujo Nishisannocho, Minami Ward, Kyoto 601-8003",
+        "locationSource": "https://outty.co/activities/kyoto-day-tour-arashiyama-scenic-train-and-hozugawa-river-cruise-5489818p66"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5044,
+          34.6673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osaka-castle",
+      "properties": {
+        "id": "osaka-castle",
+        "name": "Osaka Castle",
+        "city": "Osaka",
+        "category": "Castle",
+        "url": "https://osakacastle.org/entrance-fee/",
+        "notes": "Main castle tower"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5262,
+          34.68732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osaka-aquarium-kaiyukan",
+      "properties": {
+        "id": "osaka-aquarium-kaiyukan",
+        "name": "Osaka Aquarium Kaiyukan",
+        "city": "Osaka",
+        "category": "Aquarium",
+        "url": "https://en-61698.site-translation.com/info/ticket/kaiyukan/",
+        "notes": "Tempozan, Osaka Bay"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.428889,
+          34.654472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dotonbori",
+      "properties": {
+        "id": "dotonbori",
+        "name": "Dōtonbori",
+        "city": "Osaka",
+        "category": "Neighborhood",
+        "url": "https://www.japan.travel/en/spot/2207/",
+        "notes": "Ebisubashi Bridge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5013,
+          34.66906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hakone-open-air-museum",
+      "properties": {
+        "id": "hakone-open-air-museum",
+        "name": "Hakone Open-Air Museum",
+        "city": "Hakone",
+        "category": "Museum",
+        "url": "https://www.hakone-oam.or.jp/en/",
+        "notes": "Ninotaira, Hakone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.05151,
+          35.24472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hakone-ropeway",
+      "properties": {
+        "id": "hakone-ropeway",
+        "name": "Hakone Ropeway",
+        "city": "Hakone",
+        "category": "Scenic transit",
+        "url": "https://www.japan-guide.com/e/e5223.html",
+        "notes": "Sōunzan Station boarding point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.0347,
+          35.2412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "lake-ashi-torii-of-peace",
+      "properties": {
+        "id": "lake-ashi-torii-of-peace",
+        "name": "Lake Ashi Torii of Peace",
+        "city": "Hakone",
+        "category": "Shrine",
+        "url": "https://www.japan-guide.com/e/e5204.html",
+        "notes": "Hakone Shrine's red gate on the lakeshore"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.025733,
+          35.202825
+        ]
+      }
+    }
+  ]
+}
