@@ -11,7 +11,7 @@ export const firebaseConfig = {
 };
 
 export const sharedSync = {
-  enabled: false,
+  enabled: true,
   collection: 'sharedItineraries',
   documentId: 'japan-trip'
 };
